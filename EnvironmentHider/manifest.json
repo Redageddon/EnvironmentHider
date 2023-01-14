@@ -1,0 +1,15 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/nike4613/ModSaber-MetadataFileSchema/master/Schema.json",
+  "author": "Redageddon",
+  "description": "A plugin which allows Enabling or disabling anything in any environment.",
+  "features": [],
+  "gameVersion": "1.27.0",
+  "id": "EnvironmentHider",
+  "name": "Environment Hider",
+  "version": "1.0.0",
+  "dependsOn": {
+    "BSIPA": "^4.1.6",
+    "BeatSaberMarkupLanguage": "^1.5.3",
+    "BS Utils": "^1.10.0"
+  }
+}

@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvironmentHider", "EnvironmentHider\EnvironmentHider.csproj", "{3F4D5A82-58F6-46C8-A68E-90FA5B9F4FDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F4D5A82-58F6-46C8-A68E-90FA5B9F4FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4D5A82-58F6-46C8-A68E-90FA5B9F4FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4D5A82-58F6-46C8-A68E-90FA5B9F4FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4D5A82-58F6-46C8-A68E-90FA5B9F4FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
