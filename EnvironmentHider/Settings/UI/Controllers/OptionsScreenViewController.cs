@@ -119,6 +119,8 @@ public class OptionsScreenViewController : BSMLResourceViewController
         this.EnvironmentEnabled = this.selectedEnvironment.Enabled;
 
         RefreshTable(this.staticToggles, this.selectedEnvironment.Static);
+        RefreshTable(this.dynamicToggles, this.selectedEnvironment.Dynamic);
+        RefreshTable(this.lightToggles, this.selectedEnvironment.Lights);
     }
 
     private static void RefreshDropdown(DropDownListSetting dropDownListSetting, IEnumerable<Environment> environments)

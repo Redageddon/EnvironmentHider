@@ -17,7 +17,6 @@ public class GameEnvironmentManager : IInitializable
     public void Initialize()
     {
         string activeEnvironmentName = GetEnvironmentSceneName();
-        Logger.Log.Info(activeEnvironmentName);
         Environment environment = this.pluginConfig.Environments.First(e => e.Name.Contains(activeEnvironmentName));
 
         environment.Static.ForEach(environmentObject => environmentObject.GameObject?.SetActive(environmentObject.Enabled));
