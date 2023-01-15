@@ -6,6 +6,7 @@ namespace EnvironmentHider.Settings.UI.Controllers;
 
 public class OptionsScreenViewController : BSMLResourceViewController
 {
+    private const int DefaultEnvironmentIndex = 4;
     private PluginConfig pluginConfig = null!;
     private Managers.MenuEnvironmentManager menuEnvironmentManager = null!;
     private Environment selectedEnvironment = null!;
@@ -17,7 +18,7 @@ public class OptionsScreenViewController : BSMLResourceViewController
     {
         this.pluginConfig = pluginConfig;
         this.menuEnvironmentManager = menuEnvironmentManager;
-        this.selectedEnvironment = this.pluginConfig.Environments[0]; // have to do this so no nre
+        this.selectedEnvironment = this.pluginConfig.Environments[DefaultEnvironmentIndex]; // have to do this so no nre
     }
 
     [UIComponent(nameof(environmentsDropDownListSetting))] private readonly DropDownListSetting environmentsDropDownListSetting = null!;
@@ -128,7 +129,7 @@ public class OptionsScreenViewController : BSMLResourceViewController
         dropDownListSetting.values.Clear();
         dropDownListSetting.values.AddRange(environments.Select(environment => environment.Name));
         dropDownListSetting.UpdateChoices();
-        dropDownListSetting.dropdown.SelectCellWithIdx(0);
+        dropDownListSetting.dropdown.SelectCellWithIdx(DefaultEnvironmentIndex);
     }
 
     private static void RefreshTable(CustomCellListTableData customCellListTableData, IEnumerable<EnvironmentObject> environmentObjects)
