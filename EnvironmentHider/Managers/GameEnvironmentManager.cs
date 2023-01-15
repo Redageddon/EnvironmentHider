@@ -19,9 +19,9 @@ public class GameEnvironmentManager : IInitializable
         string activeEnvironmentName = GetEnvironmentSceneName();
         Environment environment = this.pluginConfig.Environments.First(e => e.Name.Contains(activeEnvironmentName));
 
-        environment.Static.ForEach(environmentObject => environmentObject.GameObject?.SetActive(environmentObject.Enabled));
-        environment.Dynamic.ForEach(environmentObject => environmentObject.GameObject?.SetActive(environmentObject.Enabled));
-        environment.Lights.ForEach(environmentObject => environmentObject.GameObject?.SetActive(environmentObject.Enabled));
+        environment.Static.ForEach(environmentObject => environmentObject.SetActive());
+        environment.Dynamic.ForEach(environmentObject => environmentObject.SetActive());
+        environment.Lights.ForEach(environmentObject => environmentObject.SetActive());
     }
 
     private static string GetEnvironmentSceneName()

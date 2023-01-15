@@ -1,11 +1,7 @@
-﻿using IPA.Config.Stores.Attributes;
-
-namespace EnvironmentHider.Environments;
+﻿namespace EnvironmentHider.Environments;
 
 public class EnvironmentObject
 {
-    private GameObject? gameObject;
-
     public EnvironmentObject()
     {
         this.Name = string.Empty;
@@ -24,6 +20,5 @@ public class EnvironmentObject
     [UIValue("environment-enabled")]
     public bool Enabled { get; set; }
 
-    [Ignore]
-    public GameObject? GameObject => this.gameObject ??= GameObject.Find(this.Name);
+    public void SetActive() => GameObject.Find(this.Name)?.SetActive(this.Enabled);
 }
