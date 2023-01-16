@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using EnvironmentHider.Settings;
-using UnityEngine.SceneManagement;
+﻿using EnvironmentHider.Settings;
 using Environment = EnvironmentHider.Environments.Environment;
 
 namespace EnvironmentHider.Managers;

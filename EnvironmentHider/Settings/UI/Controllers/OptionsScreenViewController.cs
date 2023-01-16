@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using EnvironmentHider.Environments;
+﻿using EnvironmentHider.Environments;
 using Environment = EnvironmentHider.Environments.Environment;
 
 namespace EnvironmentHider.Settings.UI.Controllers;

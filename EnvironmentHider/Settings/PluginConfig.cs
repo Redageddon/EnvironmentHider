@@ -1,6 +1,4 @@
 ﻿using EnvironmentHider.Environments.BuiltIn;
-using IPA.Config.Stores.Attributes;
-using IPA.Config.Stores.Converters;
 using Environment = EnvironmentHider.Environments.Environment;
 
 namespace EnvironmentHider.Settings;

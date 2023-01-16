@@ -1,7 +1,4 @@
-﻿using IPA.Config.Stores.Attributes;
-using IPA.Config.Stores.Converters;
-
-namespace EnvironmentHider.Environments;
+﻿namespace EnvironmentHider.Environments;
 
 public class Environment
 {

@@ -19,6 +19,7 @@
         <Using Include="System" />
         <Using Include="System.Collections.Generic" />
         <Using Include="System.IO" />
+        <Using Include="System.Linq" />
         <Using Include="System.Reflection" />
         <Using Include="BeatSaberMarkupLanguage" />
         <Using Include="BeatSaberMarkupLanguage.Attributes" />
@@ -30,8 +31,11 @@
         <Using Include="IPA" />
         <Using Include="IPA.Config " />
         <Using Include="IPA.Config.Stores" />
+        <Using Include="IPA.Config.Stores.Attributes" />
+        <Using Include="IPA.Config.Stores.Converters" />
         <Using Include="SiraUtil.Zenject" />
         <Using Include="UnityEngine" />
+        <Using Include="UnityEngine.SceneManagement" />
         <Using Include="Zenject" />
     </ItemGroup>
     <ItemGroup>
