@@ -116,7 +116,7 @@ public class OptionsScreenViewController : BSMLResourceViewController
     [UIAction(nameof(EnvironmentSelected))]
     private void EnvironmentSelected(string environmentName)
     {
-        this.selectedEnvironment = this.pluginConfig.Environments.Find(environment => environment.Name == environmentName);
+        this.selectedEnvironment = this.pluginConfig.Environments.Find(environment => environment.Name.Contains(environmentName));
         this.EnvironmentEnabled = this.selectedEnvironment.Enabled;
 
         RefreshTable(this.staticToggles, this.selectedEnvironment.Static);
@@ -127,7 +127,7 @@ public class OptionsScreenViewController : BSMLResourceViewController
     private static void RefreshDropdown(DropDownListSetting dropDownListSetting, IEnumerable<Environment> environments)
     {
         dropDownListSetting.values.Clear();
-        dropDownListSetting.values.AddRange(environments.Select(environment => environment.Name));
+        dropDownListSetting.values.AddRange(environments.Select(environment => environment.Name.Replace("Environment", string.Empty)));
         dropDownListSetting.UpdateChoices();
         dropDownListSetting.dropdown.SelectCellWithIdx(DefaultEnvironmentIndex);
     }
