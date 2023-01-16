@@ -50,13 +50,13 @@ public class MenuEnvironmentManager : IInitializable
     {
         if (hideAll)
         {
-            this.HideFogRing(this.pluginConfig.HideMenuPileOfNotes);
-            this.HideGround(this.pluginConfig.HideMenuPileOfNotes);
-            this.HideNotes(this.pluginConfig.HideMenuPileOfNotes);
+            this.HideFogRing(this.pluginConfig.HideFogRing);
+            this.HideGround(this.pluginConfig.HideMenuGround);
+            this.HideNotes(this.pluginConfig.HideMenuNotes);
             this.HidePileOfNotes(this.pluginConfig.HideMenuPileOfNotes);
-            this.HideLogo(this.pluginConfig.HideMenuPileOfNotes);
-            this.HideRedLine(this.pluginConfig.HideMenuPileOfNotes);
-            this.HideBlueLine(this.pluginConfig.HideMenuPileOfNotes);
+            this.HideLogo(this.pluginConfig.HideLogo);
+            this.HideRedLine(this.pluginConfig.HideRedLine);
+            this.HideBlueLine(this.pluginConfig.HideBlueLine);
         }
         else
         {
