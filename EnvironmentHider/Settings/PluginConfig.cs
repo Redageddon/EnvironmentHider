@@ -9,11 +9,19 @@ public class PluginConfig
 {
     public bool Enabled { get; set; } = true;
 
+    public bool HideFogRing { get; set; }
+
     public bool HideMenuGround { get; set; }
 
-    public bool HideMenuNotes { get; set; } = true;
+    public bool HideMenuNotes { get; set; }
 
-    public bool HideMenuPileOfNotes { get; set; } = true;
+    public bool HideMenuPileOfNotes { get; set; }
+
+    public bool HideLogo { get; set; }
+
+    public bool HideRedLine { get; set; }
+
+    public bool HideBlueLine { get; set; }
 
     [UseConverter(typeof(ListConverter<Environment>))]
     public List<Environment> Environments { get; set; } = new()

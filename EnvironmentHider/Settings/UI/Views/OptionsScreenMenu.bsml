@@ -3,9 +3,13 @@
     <tab-selector tab-tag='environment-tab'/>
     <tab tags='environment-tab' tab-name='Menu Environment'>
         <vertical child-control-height='false' horizontal-fit='PreferredSize'>
-            <checkbox-setting text='Hide Menu Ground' value='MenuGroundHidden' apply-on-change='true' bind-value='true' hover-hint='Hides the ground in the menus'/>
+            <checkbox-setting text='Hide Fog Ring' value='FogRingHidden' apply-on-change='true' bind-value='true' hover-hint='Hides the fog ring.'/>
+            <checkbox-setting text='Hide Menu Ground' value='MenuGroundHidden' apply-on-change='true' bind-value='true' hover-hint='Hides the ground in the menus.'/>
             <checkbox-setting text='Hide Menu Notes' value='MenuNotesHidden' apply-on-change='true' bind-value='true' hover-hint='Hides the notes in front of the player.'/>
             <checkbox-setting text='Hide Menu PileOfNotes' value='MenuPileOfNotesHidden' apply-on-change='true' bind-value='true' hover-hint='Hides the pile of notes behind the player.'/>
+            <checkbox-setting text='Hide Logo' value='LogoHidden' apply-on-change='true' bind-value='true' hover-hint='Hides the Logo.'/>
+            <checkbox-setting text='Hide Red Line' value='RedLineHidden' apply-on-change='true' bind-value='true' hover-hint='Hides the red line on "BEAT".'/>
+            <checkbox-setting text='Hide BLue Line' value='BlueLineHidden' apply-on-change='true' bind-value='true' hover-hint='Hides the blue line on "SABER".'/>
         </vertical>
     </tab>
     <tab tags='environment-tab' tab-name='Game Environment'>

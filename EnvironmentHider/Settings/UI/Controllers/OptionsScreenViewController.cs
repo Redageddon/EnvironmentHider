@@ -40,6 +40,23 @@ public class OptionsScreenViewController : BSMLResourceViewController
         }
     }
 
+    [UIValue(nameof(FogRingHidden))]
+    public bool FogRingHidden
+    {
+        get => this.pluginConfig.HideFogRing;
+        set
+        {
+            this.pluginConfig.HideFogRing = value;
+
+            if (this.pluginConfig.Enabled)
+            {
+                this.menuEnvironmentManager.HideFogRing(value);
+            }
+
+            this.NotifyPropertyChanged();
+        }
+    }
+
     [UIValue(nameof(MenuGroundHidden))]
     public bool MenuGroundHidden
     {
@@ -85,6 +102,57 @@ public class OptionsScreenViewController : BSMLResourceViewController
             if (this.pluginConfig.Enabled)
             {
                 this.menuEnvironmentManager.HidePileOfNotes(value);
+            }
+
+            this.NotifyPropertyChanged();
+        }
+    }
+
+    [UIValue(nameof(LogoHidden))]
+    public bool LogoHidden
+    {
+        get => this.pluginConfig.HideLogo;
+        set
+        {
+            this.pluginConfig.HideLogo = value;
+
+            if (this.pluginConfig.Enabled)
+            {
+                this.menuEnvironmentManager.HideLogo(value);
+            }
+
+            this.NotifyPropertyChanged();
+        }
+    }
+
+    [UIValue(nameof(RedLineHidden))]
+    public bool RedLineHidden
+    {
+        get => this.pluginConfig.HideRedLine;
+        set
+        {
+            this.pluginConfig.HideRedLine = value;
+
+            if (this.pluginConfig.Enabled)
+            {
+                this.menuEnvironmentManager.HideRedLine(value);
+            }
+
+            this.NotifyPropertyChanged();
+        }
+    }
+
+    [UIValue(nameof(BlueLineHidden))]
+    public bool BlueLineHidden
+    {
+        get => this.pluginConfig.HideBlueLine;
+        set
+        {
+            this.pluginConfig.HideBlueLine = value;
+
+            if (this.pluginConfig.Enabled)
+            {
+                this.menuEnvironmentManager.HideBlueLine(value);
             }
 
             this.NotifyPropertyChanged();
