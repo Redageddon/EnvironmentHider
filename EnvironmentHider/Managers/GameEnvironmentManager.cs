@@ -15,11 +15,18 @@ public class GameEnvironmentManager : IInitializable
     public void Initialize()
     {
         string activeEnvironmentName = GetEnvironmentSceneName();
-        Environment environment = this.pluginConfig.Environments.First(e => e.Name.Contains(activeEnvironmentName));
+        Environment? environment = this.pluginConfig.Environments.FirstOrDefault(e => e.Name.Contains(activeEnvironmentName));
 
-        environment.Static.ForEach(environmentObject => environmentObject.SetActive());
-        environment.Dynamic.ForEach(environmentObject => environmentObject.SetActive());
-        environment.Lights.ForEach(environmentObject => environmentObject.SetActive());
+        if (environment != null)
+        {
+            environment.Static.ForEach(environmentObject => environmentObject.SetActive());
+            environment.Dynamic.ForEach(environmentObject => environmentObject.SetActive());
+            environment.Lights.ForEach(environmentObject => environmentObject.SetActive());
+        }
+        else
+        {
+            Logger.Log.Info($"Environment not found: {activeEnvironmentName}");
+        }
     }
 
     private static string GetEnvironmentSceneName()
