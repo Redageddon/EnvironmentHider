@@ -29,7 +29,7 @@
         <Using Include="BeatSaberMarkupLanguage.ViewControllers" />
         <Using Include="HMUI" />
         <Using Include="IPA" />
-        <Using Include="IPA.Config " />
+        <Using Include="IPA.Config" />
         <Using Include="IPA.Config.Stores" />
         <Using Include="IPA.Config.Stores.Attributes" />
         <Using Include="IPA.Config.Stores.Converters" />
