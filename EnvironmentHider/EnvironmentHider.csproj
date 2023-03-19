@@ -7,7 +7,7 @@
         <AssemblyVersion>1.27.0</AssemblyVersion>
         <FileVersion>1.27.0</FileVersion>
         <Copyright>MIT</Copyright>
-        <Version>1.0.0</Version>
+        <Version>1.0.4</Version>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
@@ -39,6 +39,9 @@
         <Using Include="Zenject" />
     </ItemGroup>
     <ItemGroup>
+        <Reference Include="GameplayCore">
+            <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\GameplayCore.dll</HintPath>
+        </Reference>
         <Reference Include="BSML">
             <HintPath>$(BeatSaberDir)\Plugins\BSML.dll</HintPath>
         </Reference>

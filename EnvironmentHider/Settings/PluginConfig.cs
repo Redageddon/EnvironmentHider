@@ -29,6 +29,7 @@ public class PluginConfig
         new BTSEnvironment(),
         new CrabRaveEnvironment(),
         new DefaultEnvironment(),
+        new Dragons2Environment(),
         new DragonsEnvironment(),
         new EDMEnvironment(),
         new FitBeatEnvironment(),
