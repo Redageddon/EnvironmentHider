@@ -3,9 +3,8 @@
 public class EnvironmentObject
 {
     public EnvironmentObject()
+        : this(string.Empty)
     {
-        this.Name = string.Empty;
-        this.Enabled = true;
     }
 
     public EnvironmentObject(string name)

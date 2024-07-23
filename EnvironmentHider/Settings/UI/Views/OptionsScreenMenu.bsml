@@ -20,32 +20,42 @@
             </horizontal>
             <tab-selector tab-tag='objects-tab'/>
             <tab tags='objects-tab' tab-name='Static Objects'>
-               <vertical horizontal-fit='PreferredSize' child-control-height='false'>
+            <vertical horizontal-fit='PreferredSize' child-control-height='false'>
+               <horizontal>
                    <custom-list id='staticToggles' expand-cell='true' stick-scrolling='true' show-scrollbar='true' visible-cells='5'>
                        <vertical>
-                            <checkbox-setting text='~Name' preferred-width='60' value='environment-enabled' apply-on-change='true' bind-value='true'/>
+                           <checkbox-setting text='~Name' preferred-width='60' value='environment-enabled' apply-on-change='true' bind-value='true'/>
                        </vertical>
                    </custom-list>
-               </vertical>
+               </horizontal>
+           </vertical>
             </tab>
             <tab tags='objects-tab' tab-name='Dynamic Objects'>
                 <vertical horizontal-fit='PreferredSize' child-control-height='false'>
-                    <custom-list id='dynamicToggles' expand-cell='true' stick-scrolling='true' show-scrollbar='true' visible-cells='5'>
-                        <vertical>
-                            <checkbox-setting text='~Name' preferred-width='60' value='environment-enabled' apply-on-change='true' bind-value='true'/>
-                        </vertical>
-                    </custom-list>
+                    <horizontal>
+                        <custom-list id='dynamicToggles' expand-cell='true' stick-scrolling='true' show-scrollbar='true' visible-cells='5'>
+                            <vertical>
+                                <checkbox-setting text='~Name' preferred-width='60' value='environment-enabled' apply-on-change='true' bind-value='true'/>
+                            </vertical>
+                        </custom-list>
+                    </horizontal>
                 </vertical>
             </tab>
             <tab tags='objects-tab' tab-name='Light Objects'>
                 <vertical horizontal-fit='PreferredSize' child-control-height='false'>
-                    <custom-list id='lightToggles' expand-cell='true' stick-scrolling='true' show-scrollbar='true' visible-cells='5'>
-                        <vertical>
-                            <checkbox-setting text='~Name' preferred-width='60' value='environment-enabled' apply-on-change='true' bind-value='true'/>
-                        </vertical>
-                    </custom-list>
+                    <horizontal>
+                        <custom-list id='lightToggles' expand-cell='true' stick-scrolling='true' show-scrollbar='true' visible-cells='5'>
+                            <vertical>
+                                <checkbox-setting text='~Name' preferred-width='60' value='environment-enabled' apply-on-change='true' bind-value='true'/>
+                            </vertical>
+                        </custom-list>
+                    </horizontal>
                 </vertical>
             </tab>
+        </vertical>
+    </tab>
+    <tab tags='environment-tab' tab-name='Multiplayer Environment'>
+        <vertical child-control-height='false' child-expand-height='false'>
         </vertical>
     </tab>
 </vertical>

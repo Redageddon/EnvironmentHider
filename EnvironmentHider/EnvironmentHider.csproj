@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <ApplicationVersion>1.27.0</ApplicationVersion>
+        <ApplicationVersion>1.37.1</ApplicationVersion>
         <Authors>Redageddon</Authors>
         <AssemblyTitle>Environment Hider Plugin</AssemblyTitle>
         <Product>EnvironmentHider</Product>
-        <AssemblyVersion>1.27.0</AssemblyVersion>
-        <FileVersion>1.27.0</FileVersion>
+        <AssemblyVersion>1.37.1</AssemblyVersion>
+        <FileVersion>1.37.1</FileVersion>
         <Copyright>MIT</Copyright>
-        <Version>1.0.4</Version>
+        <Version>1.0.5</Version>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
@@ -78,9 +78,7 @@
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="manifest.json" />
-    </ItemGroup>
-    <ItemGroup>
-        <EmbeddedResource Include="Settings\UI\Views\OptionsScreenMenu.bsml" />
+      <EmbeddedResource Include="Settings\UI\Views\OptionsScreenMenu.bsml" />
     </ItemGroup>
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
       <Exec Command="copy &quot;$(ProjectDir)$(OutDir)$(ProjectName).dll&quot; &quot;$(BeatSaberDir)\Plugins\$(ProjectName).dll&quot;" />

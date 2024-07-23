@@ -3,14 +3,14 @@ using Environment = EnvironmentHider.Environments.Environment;
 
 namespace EnvironmentHider.Settings.UI.Controllers;
 
-public class OptionsScreenViewController : BSMLResourceViewController
+[HotReload(RelativePathToLayout = "../Views/OptionsScreenMenu.bsml")]
+[ViewDefinition("EnvironmentHider.Settings.UI.Views.OptionsScreenMenu.bsml")]
+public class OptionsScreenViewController : BSMLAutomaticViewController
 {
     private const int DefaultEnvironmentIndex = 4;
     private PluginConfig pluginConfig = null!;
     private Managers.MenuEnvironmentManager menuEnvironmentManager = null!;
     private Environment selectedEnvironment = null!;
-
-    public override string ResourceName => "EnvironmentHider.Settings.UI.Views.OptionsScreenMenu.bsml";
 
     [Inject]
     public void Setup(PluginConfig pluginConfig, Managers.MenuEnvironmentManager menuEnvironmentManager)
@@ -193,16 +193,14 @@ public class OptionsScreenViewController : BSMLResourceViewController
 
     private static void RefreshDropdown(DropDownListSetting dropDownListSetting, IEnumerable<Environment> environments)
     {
-        dropDownListSetting.values.Clear();
-        dropDownListSetting.values.AddRange(environments.Select(environment => environment.Name.Replace("Environment", string.Empty)));
+        dropDownListSetting.values = environments.Select(environment => environment.Name.Replace("Environment", string.Empty)).ToList();
         dropDownListSetting.UpdateChoices();
         dropDownListSetting.dropdown.SelectCellWithIdx(DefaultEnvironmentIndex);
     }
 
     private static void RefreshTable(CustomCellListTableData customCellListTableData, IEnumerable<EnvironmentObject> environmentObjects)
     {
-        customCellListTableData.data.Clear();
-        customCellListTableData.data.AddRange(environmentObjects);
+        customCellListTableData.data = environmentObjects.ToList();
         customCellListTableData.tableView.ReloadData();
     }
 }
