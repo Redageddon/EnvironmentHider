@@ -193,14 +193,14 @@ public class OptionsScreenViewController : BSMLAutomaticViewController
 
     private static void RefreshDropdown(DropDownListSetting dropDownListSetting, IEnumerable<Environment> environments)
     {
-        dropDownListSetting.values = environments.Select(environment => environment.Name.Replace("Environment", string.Empty)).ToList();
+        dropDownListSetting.Values = environments.Select(environment => environment.Name.Replace("Environment", string.Empty)).ToList();
         dropDownListSetting.UpdateChoices();
-        dropDownListSetting.dropdown.SelectCellWithIdx(DefaultEnvironmentIndex);
+        dropDownListSetting.Dropdown.SelectCellWithIdx(DefaultEnvironmentIndex);
     }
 
     private static void RefreshTable(CustomCellListTableData customCellListTableData, IEnumerable<EnvironmentObject> environmentObjects)
     {
-        customCellListTableData.data = environmentObjects.ToList();
-        customCellListTableData.tableView.ReloadData();
+        customCellListTableData.Data = environmentObjects.ToList();
+        customCellListTableData.TableView.ReloadData();
     }
 }

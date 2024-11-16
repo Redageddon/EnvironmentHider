@@ -3,13 +3,13 @@
   "author": "Redageddon",
   "description": "A plugin which allows Enabling or disabling anything in any environment.",
   "features": [],
-  "gameVersion": "1.37.1",
+  "gameVersion": "1.39.0",
   "id": "EnvironmentHider",
   "name": "Environment Hider",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "dependsOn": {
-    "BSIPA": "^4.3.0",
-    "BeatSaberMarkupLanguage": "^1.11.3",
-    "BS Utils": "^1.14.0"
+    "BSIPA": "^4.3.5",
+    "BeatSaberMarkupLanguage": "^1.12.3",
+    "SiraUtil": "^3.1.12"
   }
 }
